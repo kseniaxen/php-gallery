@@ -14,7 +14,11 @@
         </div>
 
         <div class="row">
-            <?php include_once('pages/menu.php'); ?>
+            <?php 
+                include_once('pages/menu.php');
+                include_once('pages/functions.php');
+            ?>
+            
         </div>
 
         <div class="row">
