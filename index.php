@@ -14,17 +14,38 @@
         </div>
 
         <div class="row">
-        <nav class="col-sm-12 col-md-12 col-lg-12">
-        
-        </nav>
+            <?php include_once('pages/menu.php'); ?>
         </div>
 
         <div class="row">
-        <section class="col-sm-12 col-md-12 col-lg-12">
-
-        </section>
+            <section class="col-sm-12 col-md-12 col-lg-12">
+                <?php 
+                    if(isset($_GET['page']))
+                    {
+                        $page = $_GET['page'];
+                        switch ($page) {
+                            case 1:
+                                include_once('pages/home.php');
+                                break;
+                            case 2:
+                                include_once('pages/upload.php');
+                                break;
+                            case 3:
+                                include_once('pages/gallery.php');
+                                break;
+                            case 4:
+                                include_once('pages/registration.php');
+                                break;
+                            default:
+                                echo "Not found";
+                                break;
+                        }
+                    }
+                    
+                ?>
+            </section>
         </div>
-        
+
     </div>
 
     <script src="js/bootstrap.min.js"></script>
